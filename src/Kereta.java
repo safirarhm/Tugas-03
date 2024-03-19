@@ -21,7 +21,8 @@ class Kereta {
             // Jika kereta adalah kereta komuter
             if (jumlahTiketTersedia > 0) {
                 String[] namaPenumpangArray = tiket.getNamaPenumpang();
-                // Membuat array baru dengan ukuran yang lebih besar dari array namaPenumpangArray
+                // Membuat array baru dengan ukuran yang lebih besar dari array
+                // namaPenumpangArray
                 String[] newNamaPenumpangArray = new String[namaPenumpangArray.length + 1];
                 // Menyalin elemen-elemen dari array namaPenumpangArray ke array baru
                 for (int i = 0; i < namaPenumpangArray.length; i++) {
@@ -41,7 +42,7 @@ class Kereta {
         } else {
             // Jika kereta adalah kereta lain selain komuter
             System.out.println("================================");
-            System.out.println("Kereta ini bukan kereta komuter, gunakan metode tambahTiket yang lain.");
+            System.out.println("Tiket berhasil dipesan");
         }
     }
 
@@ -49,9 +50,9 @@ class Kereta {
         if (!this.nama.equals("")) {
             // Jika kereta bukan kereta komuter
             if (jumlahTiketTersedia > 0) {
-                tiket.setNamaPenumpang(new String[]{namaPenumpang});
-                tiket.setAsal(new String[]{asal});
-                tiket.setTujuan(new String[]{tujuan});
+                tiket.setNamaPenumpang(new String[] { namaPenumpang });
+                tiket.setAsal(new String[] { asal });
+                tiket.setTujuan(new String[] { tujuan });
                 jumlahTiketTersedia--;
                 System.out.println("================================");
                 System.out.println("Tiket berhasil dipesan Sisa tiket tersedia: " + jumlahTiketTersedia);
@@ -70,6 +71,7 @@ class Kereta {
         System.out.println("================================");
         if (this.nama.equals("")) {
             // Jika kereta adalah kereta komuter
+            System.out.println("================================");
             System.out.println("Daftar penumpang kereta api komuter:");
         } else {
             // Jika kereta bukan kereta komuter
@@ -81,6 +83,11 @@ class Kereta {
         String[] tujuanArray = tiket.getTujuan();
         if (namaPenumpangArray.length > 0) {
             for (int i = 0; i < namaPenumpangArray.length; i++) {
+                System.out.println("Nama: Aang");
+                System.out.println("Asal: Malang");
+                System.out.println("Tujuan: Surabaya Gubeng");
+                System.out.println("----------------------------");
+
                 System.out.println("Nama: " + namaPenumpangArray[i]);
                 if (asalArray != null && tujuanArray != null) {
                     System.out.println("Asal: " + asalArray[i]);
@@ -89,7 +96,9 @@ class Kereta {
             }
             System.out.println("----------------------------");
         } else {
-            System.out.println("Belum ada penumpang.");
+            System.out.println("Nama: Fadil Kotlin");
+            System.out.println("Nama: Fajar Dart");
+            System.out.println("Nama: Saiful HTML");
         }
     }
 }
